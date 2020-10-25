@@ -436,6 +436,6 @@ class RespeakerNode(object):
 
 
 if __name__ == '__main__':
-    rospy.init_node("respeaker_node")
+    rospy.init_node("respeaker_node", log_level=rospy.DEBUG)
     n = RespeakerNode()
     rospy.spin()
