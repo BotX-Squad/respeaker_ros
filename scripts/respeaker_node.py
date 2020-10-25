@@ -309,7 +309,7 @@ class RespeakerNode(object):
         self.speech_prefetch = rospy.get_param("~speech_prefetch", 0.5)
         self.speech_continuation = rospy.get_param("~speech_continuation", 0.5)
         self.speech_max_duration = rospy.get_param("~speech_max_duration", 7.0)
-        self.speech_min_duration = rospy.get_param("~speech_min_duration", 0.1)
+        self.speech_min_duration = rospy.get_param("~speech_min_duration", 0.5)
         self.main_channel = rospy.get_param('~main_channel', 0)
         suppress_pyaudio_error = rospy.get_param("~suppress_pyaudio_error", True)
         #
