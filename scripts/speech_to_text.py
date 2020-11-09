@@ -75,12 +75,14 @@ class SpeechToText(object):
             rospy.loginfo("Someone said: %s" % str(result))
             self.pub_speech.publish(msg)
         except SR.UnknownValueError as e:
-            rospy.logerr("Failed to recognize: %s" % str(e))
+            # rospy.logerr("Failed to recognize: %s" % str(e))
+            pass
         except SR.RequestError as e:
-            rospy.logerr("Failed to recognize: %s" % str(e))
+            # rospy.logerr("Failed to recognize: %s" % str(e))
+            pass
 
 
 if __name__ == '__main__':
-    rospy.init_node("speech_to_text", log_level=rospy.DEBUG)
+    rospy.init_node("speech_to_text", log_level=rospy.ERROR)
     stt = SpeechToText()
     rospy.spin()
